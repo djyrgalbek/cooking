@@ -1,0 +1,676 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    transition: 0.35s;
+    cursor: default;
+}
+
+
+/*---------- Стили index.php ----------*/
+
+.background
+{
+    background-image: url(/images/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    width: 100%;
+	min-width: 1250px;
+}
+
+@media screen and (min-width: 1700px) {
+    .background
+    {
+        width: 1400px;
+        margin: auto;
+        border-left: 1px solid #dfdfdf;
+        border-right: 1px solid #dfdfdf;
+    }
+}
+.index_main_block /*Общий блок*/
+{
+    display: flex;
+    flex-direction: column;
+}
+.index_main_block > div /*Подблоки*/
+{
+    width: 100%;
+}
+.index_main_block > div:nth-child(2)/*Фоновой блок*/
+{
+    display: flex;
+    height: 500px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.index_main_block > div:nth-child(3)
+{
+    background: #0f4650;
+}
+.index_main_block > div:nth-child(4)/*Блок для сайдбара и контента*/
+{
+    display: flex;
+    align-items: stretch;
+}
+.index_main_block > div > .index_sidebar:nth-child(1)/*блок сайдбар*/
+{
+    width: 20%;
+    background: #fff;
+}
+.index_main_block > div > .index_content:nth-child(2)/*блок контент*/
+{
+    width: 80%;
+    background: #fff;
+    border-left: 1px solid #dfdfdf;
+}
+.orange_color
+{
+    color: orange;
+}
+
+
+/*---------- Стили header.php ----------*/
+
+header
+{
+    display: flex;
+	flex-wrap: nowrap;
+    align-items: center;
+    background: #2287998a;
+    position: sticky;
+    top: 0px;
+}
+header > div
+{
+    width: calc(33.33% - 30px);
+    padding: 15px;
+}
+header > div:nth-child(1)
+{
+    text-align: left;
+}
+header > div:nth-child(2)
+{
+    text-align: center;
+}
+header > div:nth-child(3)
+{
+    text-align: right;
+}
+ul.index_main a
+{
+    margin-left: 20px;
+    text-decoration: none;
+}
+ul.index_main a:first-child
+{
+    margin-left: -10px;
+}
+ul.index_main li
+{
+    display: inline;
+    list-style-type: none;
+    font: normal 16px Roboto, sans-serif;
+    color: #fff;
+}
+ul.index_main li:hover
+{
+    color: #8bb4bb;
+}
+ul.index_main li:active
+{
+    color: #fff;
+}
+.header_search
+{
+    padding: 5px;
+    border-radius: 5px;
+    color: #0f4650;
+}
+.header_logo_pic
+{
+    position: absolute;
+    top: 7px;
+    left: 20px;
+    width: 70px;
+}
+.header_logo_name
+{
+    font: bold 20px 'Francois One', sans-serif;
+    color: #fff;
+    margin-left: 90px;
+}
+
+
+/*---------- bg.php -----------*/
+
+.bg_title
+{
+    width: 60%;
+}
+.bg_title > h1
+{
+    font: bold 60px 'Francois One', sans-serif;
+    color: #fff;
+}
+.bg_title > p
+{
+    font: normal 25px 'Caveat', sans-serif;
+    color: #d1d1d1;
+    margin-top: 30px;
+}
+
+
+/*---------- sidebar.php -----------*/
+
+.sidebar_block
+{
+    display: block;
+    width: 100%;
+    background: #fff;
+    padding-top: 30px;
+}
+.sidebar_block > h1
+{
+    font: normal 25px 'Yanone Kaffeesatz', sans-serif;
+    color: #0f4650;
+    margin-left: 35px;
+}
+.sidebar_block > ul
+{
+    margin-top: 15px;
+    list-style: none;
+}
+.sidebar_block > ul li
+{
+    padding: 10px 15px;
+    border-top: 1px solid #dfdfdf;
+    width: calc(100% - 30px);
+    background: #fff;
+    margin-left: 20px;
+}
+.sidebar_block > ul li:hover a
+{
+    margin-left: 10px;
+    color: orange;
+}
+.sidebar_block > ul li:active a
+{
+    color: #0f4650;
+}
+.sidebar_block > ul li a
+{
+    text-decoration: none;
+    font: normal 18px 'Yanone Kaffeesatz', sans-serif;
+    color: #0f4650;
+}
+.sidebar_recipes
+{
+    width: 20px;
+    float: left;
+    margin-right: 10px;
+}
+
+
+/*---------- sections.php ----------*/
+
+.sections_block
+{
+    display: flex;
+    align-items: center;
+    width: calc(100% - 40px);
+    padding: 15px 20px;
+    background: linear-gradient(to top right, #0c3c44, #11697a, #024955);
+    text-transform: uppercase;
+    font: normal 15px 'Yanone Kaffeesatz', sans-serif;
+    color: #fff;
+}
+.sections_block > a
+{
+    font: normal 15px 'Yanone Kaffeesatz', sans-serif;
+    color: #fff;
+    text-decoration: none;
+}
+
+/*---------- content.php ----------*/
+
+.content_block
+{
+    width: calc(100% - 51px);
+    height: auto;
+    padding: 25px;
+    background: #fff;
+    padding-bottom: 100px;
+}
+.content_block > h1
+{
+    font: normal 35px 'Yanone Kaffeesatz', sans-serif;
+    color: #1a1b1b;
+}
+.content_recipes_block
+{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding-right: -5px; 
+    margin-top: 30px;
+}
+.content_recipes_block > div
+{
+    width: 160px;
+    height: 220px;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 15px;
+    overflow: hidden;
+    background-size: cover;
+    transform: rotate(-0.5deg);
+}
+.content_recipes_block > div:hover
+{
+    transform: rotate(2deg);
+}
+.content_ovelflow_pic
+{
+    margin-top: 35px;
+    height: 100px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px #000;
+}
+.content_pic
+{
+    /**/
+}
+.content_pic_name 
+{
+    display: inline-block;
+    width: 100%;
+    height: 37px;
+    margin-top: 10px;
+    font: normal 23px 'Caveat', sans-serif;
+    color: #242424;
+    text-align: center;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    text-decoration: none;
+}
+.content_pic_name:hover{
+    text-decoration: underline;
+}
+.content_pic_name:active{
+    text-decoration: none;
+}
+.content_date_resipe
+{
+
+    width: calc(100% - 14px);
+    padding: 5px 10px 5px 5px;
+    font: normal 15px 'Roboto', sans-serif;
+    color: #252525;
+    text-align: right;
+}
+
+
+/*----------- Контент для одного рецепта ----------*/
+
+.content_one_recipe
+{
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+.content_one_recipe > div
+{
+    width: 100%;
+}
+.content_one_recipe > div:nth-child(2)
+{
+    width: calc(100% - 200px);
+    padding: 50px 100px;
+    font: normal 23px 'Caveat', sans-serif;
+    color: #000;
+}
+.content_one_recipe > div:nth-child(2) > p
+{
+    text-align: center;
+}
+.content_one_recipe > div:nth-child(3)
+{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.content_singleAgent_block
+{
+    width: calc(50% - 60px);
+    padding: 5px 30px;
+    background: #ffffff;
+}
+.content_singleAgent_block:first-child
+{
+    border-right: 1px dashed #d1d1d1;
+}
+.content_singleAgent_block > h1
+{
+    font: normal 30px 'Yanone Kaffeesatz', sans-serif;
+    color: #177686; 
+    margin-bottom: 25px;
+}
+.content_singleAgent_block > ul 
+{
+    list-style: disc inside;
+    font: normal 17px 'Roboto', 'Yanone Kaffeesatz', sans-serif;
+    color: #000; 
+}
+.content_singleAgent_block > ul > h2
+{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font: normal 20px 'Roboto', 'Yanone Kaffeesatz', sans-serif;
+    color: #fff; 
+    width: calc(100% - 20px);
+    padding: 5px 10px;
+    background: orange;
+}
+.content_singleAgent_block > ol
+{
+    list-style-position: inside;
+    font: normal 17px 'Roboto', 'Yanone Kaffeesatz', sans-serif;
+    color: #000;
+}
+.category_pic
+{
+    width: 80%;
+    margin-left: calc(10% - 1px);
+    border: 1px solid #fff;
+    border-radius: 150px 10px;
+    box-shadow: 7px 7px 25px #000;
+}
+.content_one_recipe_author
+{
+    margin-top: 55px;
+    text-align: right;
+    font: bold 16px 'Roboto', 'Yanone Kaffeesatz', sans-serif;
+    color: #000;
+}
+.content_one_recipe_author > a
+{
+    font-weight: normal;
+    color: #000;
+}
+.content_one_recipe_author > a:hover
+{
+    color: orange;
+}
+.content_one_recipe_author > a:active
+{
+    color: #000;
+}
+
+/*---------- footer.php ----------*/
+
+.footer_block
+{
+    display: flex;
+    flex-wrap: nowrap;
+    background: #0b0c0c;
+}
+.footer_block > div
+{
+    width: calc(33.33% - 50px);
+    padding: 25px;
+    background: #0b0c0c;
+    text-align: center;
+    font: normal 15px 'Roboto', sans-serif;
+    color: #626262; 
+}
+.footer_block > div > h1
+{
+    font: normal 20px 'Roboto', sans-serif;
+    color: #fff; 
+    margin-bottom: 20px;
+}
+.footer_block > div > a
+{
+    font: normal 15px 'Roboto', sans-serif;
+    color: #626262; 
+}
+.footer_block > div > a:hover
+{
+    color: #fff;
+}
+.footer_block > div > a:active
+{
+    color: #626262;
+}
+.footer_block > div > ul
+{
+    margin-top: 10px;
+}
+.footer_block > div > ul li
+{
+    display: inline-block;
+    list-style-type: none;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+}
+.footer_block > div > ul li.instagram
+{
+    background-image: url('/images/social/instagram.png');
+}
+.footer_block > div > ul li.instagram:hover
+{
+    background-image: url('/images/social/instagram_onn.png');
+}
+
+.footer_block > div > ul li.whatsapp
+{
+    background-image: url('/images/social/whatsapp.png');
+}
+.footer_block > div > ul li.whatsapp:hover
+{
+    background-image: url('/images/social/whatsapp_onn.png');
+}
+
+.footer_block > div > ul li.mail
+{
+    background-image: url('/images/social/mail.png');
+}
+.footer_block > div > ul li.mail:hover
+{
+    background-image: url('/images/social/mail_onn.png');
+}
+
+
+/*---------- author.php ----------*/
+
+.content_author_block
+{
+    display: flex;
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+}
+.content_author_block > div:first-child
+{
+    width: calc(60% - 50px);
+    padding: 25px;
+    box-shadow: inset -5px -5px 0px #9ea59f, -2px -2px 20px #9ea59f;
+    font: normal 15px 'Roboto', 'Yanone Kaffeesatz', sans-serif;
+    color: #000;
+}
+.content_author_block > div > h2
+{
+    font-size: 25px;
+}
+.content_author_block > div > p
+{
+    margin-top: 25px;
+}
+.content_author_block > div > p > a
+{
+    color: #000;
+}
+.content_author_block > div > p > a:hover
+{
+    margin-left: 7px;
+    color: #0c3c44;
+}
+.content_author_block > div > p > a:active
+{
+    margin-left: 7px;
+    color: #000;
+}
+.content_author_block > div:nth-child(2)
+{
+    width: 40%;
+}
+.content_author_pic
+{
+    width: 100%;
+    margin-left: -59px;
+}
+
+
+/*---------- contacts.php ----------*/
+.contacts_block
+{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+}
+.contacts_block > div
+{
+    width: calc(48% - 50px);
+    padding: 25px;
+    background: #fff;
+    border: 1px dashed #dfdfdf;
+}
+.contacts_block > div > h1
+{
+    font: normal 23px 'Roboto', 'Yanone Kaffeesatz', sans-serif;
+    color: #000;
+    text-align: center;
+}
+.contacts_block > div > h2
+{
+    font: normal 18px 'Roboto', 'Yanone Kaffeesatz', sans-serif;
+    color: #000;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.contacts_form > span
+{
+    font: normal 18px 'Roboto', 'Yanone Kaffeesatz', sans-serif;
+    color: #000;
+}
+.contacts_form > input
+{
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 7px 0px 20px 0px;
+}
+.contacts_form > textarea
+{
+    width: calc(100% - 20px);
+    height: 100px;
+    padding: 10px;
+    resize: none;
+    margin: 7px 0px 20px 0px;
+}
+.contacts_form > button 
+{
+    width: calc(100% + 4px);
+    padding: 10px;
+    background: #ffa500;
+    text-align: center;
+    font: normal 18px 'Roboto', 'Yanone Kaffeesatz', sans-serif;
+    color: #f0f0f0;
+    border: none;
+}
+.contacts_form > button:hover
+{
+    background: #ffc400;
+    color: #fff;
+}
+.contacts_block_pic
+{
+    width: 100%;
+    margin-top: 30px;
+}
+.contacts_block_ul
+{
+    width: 100%;
+    list-style-type: none;
+    margin-top: 30px;
+}
+.contacts_block_ul a
+{
+    text-decoration: none;
+    color: #000;
+}
+.contacts_block_ul li
+{
+    width: calc(100% - 14px);
+    padding: 7px;
+    background: #ffffff;
+    margin-top: 5px;
+    border-radius: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: 0.1s;
+    font: normal 16px 'Roboto', 'Yanone Kaffeesatz', sans-serif;
+}
+.contacts_block_ul li:hover
+{
+    box-shadow: 3px 2px 5px #000;
+    color: #084042;
+}
+.contacts_block_ul li > img
+{
+    width: 25px;
+    margin-right: 5px;
+}
+
+
+/*---------- rezult_search.php ----------*/
+.rezult_search_ul
+{
+    list-style: inside none;
+    margin-top: 30px;
+    transition: none;
+}
+
+.rezult_search_ul li
+{
+    margin-top: 10px;
+}
+.rezult_search_ul li > a
+{
+    font: normal 16px 'Roboto', 'Yanone Kaffeesatz', sans-serif;
+    color: #000;
+}
+.rezult_search_ul li a:hover
+{
+    color: orange;
+}
+.rezult_search_ul li a:active
+{
+    color: #000;;
+}
+.rezult_search_empty
+{
+    margin-top: 30px;
+    font: normal 16px 'Roboto', 'Yanone Kaffeesatz', sans-serif;
+    color: #000;
+}
